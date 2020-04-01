@@ -10,7 +10,7 @@ function filterArrayByTitle(object, string) {
 function searchPosts() {
     var xhttp = new XMLHttpRequest();
     var searchTerm = document.getElementById('search-term').value;
-    var apiKey = 'b5db1638ca8c42e78b791c3a29971cc7'
+
 
 
     xhttp.onreadystatechange = function() {
@@ -34,7 +34,8 @@ function searchPosts() {
             // console.log('error');
         }
     }
-    var url = 'https://newsapi.org/v2/everything?q=' + searchTerm +  '&pageSize=50&language=fr&apiKey=' + apiKey;
+
+    var url = 'http://localhost:5000/news?q=' + searchTerm;
     console.log(url)
     xhttp.open('GET', url);
     xhttp.send();
