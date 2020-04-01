@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require('request');
-var env = require('./environment/environment.example.js')
+var env = require('./environment/environment.js')
 var app = express();
 
 
